@@ -1,1 +1,39 @@
 <% layout("/layouts/boilerplate") %>
+
+<div class="contact-page">
+  <div class="contact-container">
+    <form
+      class="contact-left"
+      action="https://api.web3forms.com/submit"
+      method="POST"
+    >
+      <div class="titleLeft"><h2 class="titleLeft">Get in Touch</h2></div>
+      <input
+        type="hidden"
+        name="access_key"
+        value="1416aa6d-4c4a-483a-a1d9-41df256827b1"
+      />
+      <input type="text" 
+      name="name"
+      class="contact-inputs"
+       placeholder="Your name" />
+
+      <input type="email"
+      name="email"
+       class="contact-inputs" 
+       placeholder="Your email" />
+
+      <textarea
+        class="contact-inputs"
+        name="message"
+        placeholder="Type your message"
+      ></textarea>
+
+      <button class="contact-btn">Submit</button>
+    </form>
+
+    <div class="right-contact">
+      <img src="/images/right_img.png" alt="contact" />
+    </div>
+  </div>
+</div>

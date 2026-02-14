@@ -1,5 +1,214 @@
 <% layout("/layouts/boilerplate") %>
 
-<div class="">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Projects</title>
+
+<style>
+   /* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(to right, #1f2a44, #243b55);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== HEADER ========== */
+
+header {
+  background: #1c2230;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #00d4ff;
+}
+
+/* ========== MAIN PROJECT SECTION ========== */
+
+main {
+  flex: 1;  /* pushes footer down properly */
+}
+
+#projects {
+  max-width: 1100px;     /* keeps content centered */
+  margin: 60px auto;     /* center horizontally */
+  padding: 0 20px;       /* space from sides */
+  text-align: center;
+}
+
+#projects h1 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* ========== PROJECT CARDS ========== */
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;   /* space between cards */
+}
+
+.project-card {
+  width: 520px;           /* smaller card */
+  background: #1f2a40;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+  text-align: left;
+  margin:1rem;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h2 {
+  color: #00d4ff;
+  margin-bottom: 12px;
+}
+
+.project-content p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #dcdcdc;
+}
+
+.tech-stack {
+  font-size: 13px;
+  margin-bottom: 15px;
+  color: #b0c4de;
+}
+
+/* ========== BUTTONS ========== */
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 7px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.btn-demo {
+  background: #00d4ff;
+  color: black;
+}
+
+.btn-demo:hover {
+  background: #00a6c7;
+}
+
+.btn-code {
+  border: 1px solid #00d4ff;
+  color:black;
+}
+
+.btn-code:hover {
+  background: #00d4ff;
+  color: black;
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="proect-heading" style="text-align:center; margin: 1rem;">My Projects</h1>
+
+<div class="projects-container">
+
+    <!-- Wanderlust Project -->
+    <div class="project-card">
+        <img src="/images/w-img.jpg" class="project-img" alt="Wanderlust Project">
+
+        <div class="project-content">
+            <h2>Wanderlust</h2>
+
+            <p>
+                Wanderlust is a full-stack web development project designed for exploring travel destinations.
+                Users can view listings, add places, manage bookings, and experience a clean and responsive interface.
+                It demonstrates CRUD operations and dynamic content rendering.
+            </p>
+
+            <div class="tech-stack">
+                <strong>Tech Stack:</strong> HTML, CSS, JavaScript, Node.js, Express, MongoDB
+            </div>
+
+            <div class="btn-group">
+                <a href="https://wanderlust-jer1.onrender.com/listings" class="btn btn-demo">Live Demo</a>
+                <a href="https://github.com/aysha-ansari18/wanderlust" class="btn btn-code">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expense Tracker Project -->
+    <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c" class="project-img" alt="Expense Tracker">
+
+        <div class="project-content">
+            <h2>Expense Tracker App</h2>
+
+            <p>
+                Expense Tracker is a front-end development project that allows users to add, delete,
+                and manage their daily expenses. It dynamically updates the total balance and provides
+                a clean user-friendly interface for financial tracking.
+            </p>
+
+            <div class="tech-stack">
+                <strong>Tech Stack:</strong> HTML, CSS, JavaScript (Frontend)
+            </div>
+
+            <div class="btn-group">
+                <a href="https://aysha-ansari18.github.io/-expense-tracker-app/" class="btn btn-demo">Live Demo</a>
+                <a href="https://github.com/aysha-ansari18/-expense-tracker-app" class="btn btn-code">GitHub</a>
+            </div>
+        </div>
+    </div>
 
 </div>
+
+</body>
+</html>
