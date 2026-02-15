@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const ejsMate = require('ejs-mate');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.engine('ejs', ejsMate);
 app.set("view engine","ejs" );
@@ -10,8 +10,9 @@ app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"/public")));
 
 app.get('/home', (req, res) => {
-  res.render('pages/index'); // render full page directly
+  res.render('pages/index');
 });
+
 
 app.get('/skills', (req, res) => {
   res.render('pages/skills');
